@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Signika+Negative:wght@600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+background-color: #070707;
+opacity: 1;
+background-image: radial-gradient(#2b2929 0.4px, #070707 0.4px);
+background-size: 18px 18px;
+background-attachment: fixed;
+
+}
+.point{
+    cursor: url('Components/IMGS/cursor.png'),auto;
 }

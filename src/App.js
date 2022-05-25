@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Heder from './Components/Header/Heder';
+import HeroContat from './Components/HeroContact/HeroContat';
+import Skilss from './Components/Skilss/Skilss';
+import './App.css';
+import Contact from './Components/Contact/Contact';
+import WhoImI from './Components/WhoImI/WhoImI';
+import Goals from './Components/Goals/Goals';
+import Modal from './Components/Modal/Modal';
+import { AnimatePresence } from 'framer-motion';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import MyWork from './Components/MyWork/MyWork';
+import cursor from './Components/IMGS/cursor.png'
 function App() {
+let store=useSelector(store=>store.ModalReducer)
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="App overflow-x-hidden point">
+     <Heder/>
+     <HeroContat/>
+     <WhoImI/>
+     <Skilss/>
+     <MyWork/>
+     <Goals/>
+     <Contact/>
+   <AnimatePresence exitBeforeEnter>
+     { store.is_open &&  <Modal/>}
+   </AnimatePresence>
     </div>
   );
 }
